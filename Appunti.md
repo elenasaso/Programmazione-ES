@@ -163,6 +163,7 @@ needed
 
 ## The smallest of two numbers 
 A program that reads two numbers from input and writes the smallest to output
+
 [https://github.com/elenasaso/Programmazione-ES/blob/94cf40488376963b84b1e2cb8b032fff203d0289/smallest_two_numbers.cpp]
 
 ### If then else
