@@ -253,7 +253,7 @@ while ( condition expr ) statement
 ## Integer square root (_while loop_)
 Write a program that computes the integer square root of a non-negative integer number, i.e. the largest integer number whose square is not greater than the given number
 
-<img width="650" alt="Schermata 2022-03-18 alle 17 55 07" src="https://user-images.githubusercontent.com/99679794/159047913-9fbf9f23-8910-408b-af57-ea5ebbcc8618.png">
+<img width="350" alt="Schermata 2022-03-18 alle 17 55 07" src="https://user-images.githubusercontent.com/99679794/159047913-9fbf9f23-8910-408b-af57-ea5ebbcc8618.png">
 
 [https://github.com/elenasaso/Programmazione-ES/blob/4a6c8586e47224e3bed489506e8401e85bf13a42/integer_square_root_while.cpp]
 
