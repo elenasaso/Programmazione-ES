@@ -342,3 +342,35 @@ std::abs(x);
 1 + static_cast<int>(2.3)
 ```
 - Mechanims exist to define implicit and explicit conversions involving user-defined types
+
+### const-safety
+- Data qualified as const is logically immutable 
+- Data that is meant to be immutable should be const 
+```
+int const x = 1'000'000'000; // or const int
+std::cout << x + 32; // ok, read-only
+x += 32; // error, trying to modify
+int const y; // error, not initalized and not modifiable later
+```
+```
+std::string const message = "Hello";
+std::cout << message + "Elena"; // ok, read-only
+message += "Elena"; // error, trying to modify
+std::string const empty_message; //ok! empty string
+```
+Primitive types (e.g. int) and user-defined types (such as std::string) behave differently with respect to default initialization, i.e. without an explicit initial value
+- User-defined types can define what default initialization means 
+- For std::string it means “empty string”
+- More later
+
+## Functions 
+A function abstracts away a piece of code that performs a well-defined task behind a well-definded interface.
+A function associates a bloch of statements with 
+- a name 
+- a list of zero or more parameters 
+A function may return a result 
+
+Let's consider the code that computes the **integer square root**
+- Let's give it a name -> isqrt
+- We pass isqrt a number -> the list of parameters has only one item of type int 
+- isqrt computes a value that we want back 
