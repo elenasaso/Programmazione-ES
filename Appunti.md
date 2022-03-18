@@ -186,3 +186,20 @@ int i = ···; if (i < 0) {
 - _condition-expr_ can be any expression whose result is of type (convertible to) bool, i.e. either true or false
 - _statement_ can be a block, possibly including multiple statements 
 ◦ In fact, the statement should always be a block
+
+### Bool
+Type representing a boolean value 
+- Set of values: _false_,_true_
+- Operations: conjunction (_and_), disjunction (_or_), negation (_not_), ...
+- Size: typically 1 byte
+- Representation: like the ints 0 and 1
+- Literals: false and true
+```
+bool b = true;
+b = i == j; // the first "=" is an assignment, "==" means equality
+bool b2 = i != 1234; // "!=" means inequality
+bool b3 = b2 && i < j;    // "&&" means "and"
+bool b4 = i < j || i < k; // "||" means "or"
+bool b5 = !(i == j);      // "!" means "not"
+```
+- Note the use of parenthesis in !(i == j) to have the right precedence of application of operators
