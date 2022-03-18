@@ -310,4 +310,23 @@ Type representing a floating-point number
 
 <img width="650" alt="Schermata 2022-03-18 alle 19 08 36" src="https://user-images.githubusercontent.com/99679794/159059382-68f9018d-8e45-44ef-b7e9-0a50109edcd1.png">
 
+### Standard mathematical functions 
+The cmath header includes many ready-to-use mathematical functions
+- Exponential
+- Power
+- Trigonometric
+- Interpolation
+- Hyperbolic 
+- Floating point manipulation and comparison
+- ...
+
+```
+#include <cmath> 
+...
+double x = ...;
+std::sqrt(x);
+std::pow(x, .5); 
+std::sin(x); 
+std::log(x); 
+std::abs(x);
 
