@@ -124,6 +124,7 @@ std::cout << "hello, " << name << '\n'
 <img width="650" alt="Schermata 2022-03-18 alle 14 52 09" src="https://user-images.githubusercontent.com/99679794/159015306-ddee6efd-3484-4d73-987f-52a4a95f7f69.png">
 
 ## [Sum of two numbers](https://github.com/elenasaso/pf2021/blob/5d540d0a46f313a710d4482591b7ed0c162c0e42/sum_two_numbers.cpp)
+A program that reads two numbers from input and writes the sum to output
 
 ### Expression statement
 - An expression followed by a semicolon (;)
