@@ -427,9 +427,7 @@ int main()
   if (std::cin.fail() || n < 0) {
     std::cerr << "Invalid number\n";
     return EXIT_FAILURE;
-   }
-   ···
+  }
+  ···
  }
 ```
-                 
-      
