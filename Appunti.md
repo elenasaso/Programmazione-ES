@@ -189,7 +189,7 @@ int i = ···; if (i < 0) {
 
 ### Bool
 Type representing a boolean value 
-- Set of values: _false_,_true_
+- Set of values: _false_, _true_
 - Operations: conjunction (_and_), disjunction (_or_), negation (_not_), ...
 - Size: typically 1 byte
 - Representation: like the ints 0 and 1
@@ -203,3 +203,37 @@ bool b4 = i < j || i < k; // "||" means "or"
 bool b5 = !(i == j);      // "!" means "not"
 ```
 - Note the use of parenthesis in !(i == j) to have the right precedence of application of operators
+
+#### Logical operations 
+<img width="989" alt="Schermata 2022-03-18 alle 17 43 20" src="https://user-images.githubusercontent.com/99679794/159045990-e404834c-2586-4ff7-a46b-c05524e56712.png">
+
+### Scope 
+The scope of a name appearing in a program is the, possibly discontiguous, portion of source code where that name is valid
+- block scope
+- function scope
+- class scope
+- namespace scope (including the global one) 
+- ...
+
+#### Block scope
+- The scope of a name declared in a block starts at the point of declaration and ends at the }
+
+```
+{
+···
+  int num;         // scope of num begins here
+  std::cin >> num; // ok
+} // scope of num ends here
+std::cout << num;  // error
+``` 
+
+- The scope of a variable should be as small as possible
+◦ Declare a variable only when it’s needed 
+◦ If possible/meaningful, initialize it
+
+## Is a number even? 
+A program that reads a number from input and tells if it’s even
+[https://github.com/elenasaso/Programmazione-ES/blob/866f85b45ef84ae9da8fc4a8e3caa1da7313508b/number_even.cpp]
+
+## Exercise: the smallest of three numbers 
+Write a program that reads three numbers from standard input and writes the smallest one to standard output
