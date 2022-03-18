@@ -239,7 +239,7 @@ A program that reads a number from input and tells if it’s even
 ## Exercise: the smallest of three numbers 
 Write a program that reads three numbers from standard input and writes the smallest one to standard output
 
-### While loop
+### while loop
 ```
 while ( condition expr ) statement
 ```
@@ -260,3 +260,13 @@ Write a program that computes the integer square root of a non-negative integer 
 ## Sum of the first N numbers 
 Write a program that reads a non-negative integer number N from standard input, computes the sum of the first N numbers and writes the result to standard output
 
+### for loop
+```
+for ( init-statement condition-expr opt ; expression opt ) statement 
+```
+- Execute _init-statement_, which may be a single ;
+◦ If _init-statement_ contains declarations, the scope of the declared names is the loop
+- Execute repeatedly statement until _condition-expr_ becomes false 
+- _condition-expr_ is evaluated at the beginning of each iteration
+◦ If _condition-expr_ is already false at the beginning, statement is never executed
+◦ But _init-statement_ is always executed
