@@ -67,7 +67,7 @@ C++ is a **statically typed** language (mostly)
 - std::nullptr_t
 - void
 
-<img width="646" alt="Schermata 2022-03-18 alle 14 37 17" src="https://user-images.githubusercontent.com/99679794/159012846-96b3056f-166b-4888-95ec-0b373dd30361.png">
+<img width="650" alt="Schermata 2022-03-18 alle 14 37 17" src="https://user-images.githubusercontent.com/99679794/159012846-96b3056f-166b-4888-95ec-0b373dd30361.png">
 
 ### Variables
 - A variable is a NAME for an object
@@ -121,7 +121,7 @@ std::cout << "hello, " << name << '\n'
 - Some expressions have side-effects. They modify the state of the program, i.e. the state of memory, or the external world
 
 ### Operators
-<img width="645" alt="Schermata 2022-03-18 alle 14 52 09" src="https://user-images.githubusercontent.com/99679794/159015306-ddee6efd-3484-4d73-987f-52a4a95f7f69.png">
+<img width="650" alt="Schermata 2022-03-18 alle 14 52 09" src="https://user-images.githubusercontent.com/99679794/159015306-ddee6efd-3484-4d73-987f-52a4a95f7f69.png">
 
 ## Sum of two numbers 
 [https://github.com/elenasaso/pf2021/blob/5d540d0a46f313a710d4482591b7ed0c162c0e42/sum_two_numbers.cpp]
@@ -205,7 +205,7 @@ bool b5 = !(i == j);      // "!" means "not"
 - Note the use of parenthesis in !(i == j) to have the right precedence of application of operators
 
 #### Logical operations 
-<img width="989" alt="Schermata 2022-03-18 alle 17 43 20" src="https://user-images.githubusercontent.com/99679794/159045990-e404834c-2586-4ff7-a46b-c05524e56712.png">
+<img width="650" alt="Schermata 2022-03-18 alle 19 09 28" src="https://user-images.githubusercontent.com/99679794/159059618-7c9cf79f-46d0-4636-a90c-ac9fb9752bc0.png">
 
 ### Scope 
 The scope of a name appearing in a program is the, possibly discontiguous, portion of source code where that name is valid
@@ -253,7 +253,7 @@ while ( condition expr ) statement
 ## Integer square root (_while loop_)
 Write a program that computes the integer square root of a non-negative integer number, i.e. the largest integer number whose square is not greater than the given number
 
-<img width="367" alt="Schermata 2022-03-18 alle 17 55 07" src="https://user-images.githubusercontent.com/99679794/159047913-9fbf9f23-8910-408b-af57-ea5ebbcc8618.png">
+<img width="650" alt="Schermata 2022-03-18 alle 17 55 07" src="https://user-images.githubusercontent.com/99679794/159047913-9fbf9f23-8910-408b-af57-ea5ebbcc8618.png">
 
 [https://github.com/elenasaso/Programmazione-ES/blob/4a6c8586e47224e3bed489506e8401e85bf13a42/integer_square_root_while.cpp]
 
@@ -308,4 +308,6 @@ Type representing a floating-point number
 - 42.0f 1.F -1.5f 12.34e3F -.34E-3f -1234e-2F 
 - Same as double but with an f or F suffix
 
-<img width="692" alt="Schermata 2022-03-18 alle 19 08 36" src="https://user-images.githubusercontent.com/99679794/159059382-68f9018d-8e45-44ef-b7e9-0a50109edcd1.png">
+<img width="650" alt="Schermata 2022-03-18 alle 19 08 36" src="https://user-images.githubusercontent.com/99679794/159059382-68f9018d-8e45-44ef-b7e9-0a50109edcd1.png">
+
+
