@@ -319,7 +319,6 @@ The cmath header includes many ready-to-use mathematical functions
 - Hyperbolic 
 - Floating point manipulation and comparison
 - ...
-
 ```
 #include <cmath> 
 ...
@@ -329,4 +328,17 @@ std::pow(x, .5);
 std::sin(x); 
 std::log(x); 
 std::abs(x);
+``` 
 
+### Type conversion 
+- A value of type T1 may be converted implicitly to a value of type T2 in order to match the expected type in a certain situation
+```
+1 + 2.3
+```
+- Between numbers and bool, signed and unsigned numbers, numbers of different size, integral and floating point numbers, ...)
+- Conversions sometimes are surprising
+- Conversions can be explicit using static_cast
+```
+1 + static_cast<int>(2.3)
+```
+- Mechanims exist to define implicit and explicit conversions involving user-defined types
