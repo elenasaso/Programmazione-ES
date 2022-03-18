@@ -239,7 +239,7 @@ A program that reads a number from input and tells if it’s even
 ## Exercise: the smallest of three numbers 
 Write a program that reads three numbers from standard input and writes the smallest one to standard output
 
-## While loop
+### While loop
 ```
 while ( condition expr ) statement
 ```
@@ -256,4 +256,7 @@ Write a program that computes the integer square root of a non-negative integer 
 <img width="367" alt="Schermata 2022-03-18 alle 17 55 07" src="https://user-images.githubusercontent.com/99679794/159047913-9fbf9f23-8910-408b-af57-ea5ebbcc8618.png">
 
 [https://github.com/elenasaso/Programmazione-ES/blob/4a6c8586e47224e3bed489506e8401e85bf13a42/integer_square_root_while.cpp]
+
+## Sum of the first N numbers 
+Write a program that reads a non-negative integer number N from standard input, computes the sum of the first N numbers and writes the result to standard output
 
