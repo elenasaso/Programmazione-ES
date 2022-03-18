@@ -125,3 +125,63 @@ std::cout << "hello, " << name << '\n'
 
 ## Sum of two numbers 
 [https://github.com/elenasaso/pf2021/blob/5d540d0a46f313a710d4482591b7ed0c162c0e42/sum_two_numbers.cpp]
+
+### Expression statement
+- An expression followed by a semicolon (;)
+- The value of the expression (if any) is discarded
+- The expression can have side effects
+```
+b + 2;
+a = b + 2;
+std::cin >> a >> b;
+; // empty statement
+```
+### Compound statement (or BLOCK)
+A sequence of zero or more statements enclosed between braces ({}) 
+```
+{
+   found = true;
+   ++i;
+   int n = 3;
+   std::cout << n;
+}
+```
+```
+{ found = true; ++i; ··· } // all on one line
+```
+
+### Declaration statement
+- A declaration statement introduces one or more new identifiers into a C++ program, possibly initializing them
+◦ typically variables, but not only
+- A declaration of a **variable in a block** makes the variable of **automatic storage duration**, unless otherwise specified
+◦ the corresponding object is **automatically created** each time the declaration is executed
+◦ the corresponding object is **automatically destroyed** each time the execution reaches the end of the block
+- A declaration should introduce only one identifier
+- A variable should be declared only in the moment it’s actually
+needed
+- A variable should be initialized at the point of declaration, if there is a meaningful initial value
+
+## The smallest of two numbers 
+A program that reads two numbers from input and writes the smallest to output
+[https://github.com/elenasaso/Programmazione-ES/blob/94cf40488376963b84b1e2cb8b032fff203d0289/smallest_two_numbers.cpp]
+
+### If then else
+- Selection statement to choose one of two flows of control depending on a boolean condition
+- Two (basic) forms:
+◦ if (_condition-expr_) _statement_ else _statement_ 
+◦ if (_condition-expr_) _statement_ 
+```
+if (a < b) {
+  result = a; // "true" branch
+} else {
+  result = b; // "false" branch
+}
+```
+```
+int i = ···; if (i < 0) {
+  i = -i;   // "true" branch
+}
+```
+- _condition-expr_ can be any expression whose result is of type (convertible to) bool, i.e. either true or false
+- _statement_ can be a block, possibly including multiple statements 
+◦ In fact, the statement should always be a block
