@@ -20,7 +20,7 @@ int main ( )
 #### Input/Output
 - One mechanism offered by C++ to do input and output is the I/O streams interface, which allows the creation and the manipulation of stream entities
 - Input and output streams connected to the terminal are automatically available to a program
-◦ std::cin, std::cout (and std::cerr for errors)
+- std::cin, std::cout (and std::cerr for errors)
 - To extract values, use the stream operators >>
 - To insert values, use the stream operators <<
 
@@ -49,16 +49,16 @@ Hello, Elena
 ### Objects 
 - The constructs in a C++ program create, destroy, refer to, access, and manipulate objects
 - An object is a region of storage (i.e. memory) 
-◦ has a storage duration/lifetime
-◦ has a type
-◦ can have a name
+- has a storage duration/lifetime
+- has a type
+- can have a name
  
  #### Types
 - A type givees meaning to a piece of storage 
 - A type identifies a set of values and the operations that can be applied to those values
-◦ C++ is a strongly typed language (mostly)
+C++ is a **strongly typed** language (mostly)
 - The compiler checks that program instructions are compatible with the type system
-◦ C++ is a statically typed language (mostly)
+C++ is a **statically typed** language (mostly)
 - C++ defines a few fundamental types and provides mechanisms to build compound types on top of them
 
 #### Fundamental Types
@@ -72,8 +72,8 @@ Hello, Elena
 ### Variables
 - A variable is a NAME for an object
 - A name is an identifier: a sequence of letters (including _ ) and digits, starting with a letter
-◦ Avoid _ at the beginning 
-◦ Choose meaningful names
+- Avoid _ at the beginning 
+- Choose meaningful names
 
 ```
 int i; // declaration; the value is undefined
@@ -104,9 +104,9 @@ Integer literals are of type int
 - Provided by the C++ Standard Library
 - Many operations available
 - An std::string can be initialized with a string literal, a sequence of escaped or non-escaped characters between double quotes
-◦ "hello" "hello'\n'world" "hello \"world\"" 
-◦ \n means “newline”
-• The type of a string literal is **not** std::string
+- "hello" "hello'\n'world" "hello \"world\"" 
+- \n means “newline”
+- The type of a string literal is **not** std::string
 
 ### Expressions
 - An expression is a sequence of operators and their operands that specifies a computation
@@ -168,9 +168,9 @@ A program that reads two numbers from input and writes the smallest to output
 
 ### If then else
 - Selection statement to choose one of two flows of control depending on a boolean condition
-- Two (basic) forms:
-◦ if (_condition-expr_) _statement_ else _statement_ 
-◦ if (_condition-expr_) _statement_ 
+Two (basic) forms:
+- if (_condition-expr_) _statement_ else _statement_ 
+- if (_condition-expr_) _statement_ 
 ```
 if (a < b) {
   result = a; // "true" branch
@@ -245,10 +245,10 @@ while ( condition expr ) statement
 ```
 - Execute repeatedly _statement_ until _condition-expr_ becomes false 
 - _condition-expr_ is evaluated at the beginning of each iteration
-◦ If _condition-expr_ is already false at the beginning, _statement_ is never executed
+- If _condition-expr_ is already false at the beginning, _statement_ is never executed
 - _statement_ can be any statement, including of course a block
 - _statement_ should modify something so that the evaluation of _condition-expr_ may change
-◦ Otherwise the loop may never terminate
+- Otherwise the loop may never terminate
 
 ## Integer square root (_while loop_)
 Write a program that computes the integer square root of a non-negative integer number, i.e. the largest integer number whose square is not greater than the given number
@@ -269,14 +269,14 @@ for ( init-statement; condition-expr<sub>opt</sub> ; expression<sub>opt</sub> ) 
 - Execute _init-statement_, which may be a single
 - If _init-statement_ contains declarations, the scope of the declared names is the loop
 - Execute repeatedly statement until _condition-expr_ becomes false 
-- _condition-expr_ is evaluated at the beginning of each iteration
-◦ If _condition-expr_ is already false at the beginning, statement is never executed
-◦ But _init-statement_ is always executed
+_condition-expr_ is evaluated at the beginning of each iteration
+If _condition-expr_ is already false at the beginning, statement is never executed
+But _init-statement_ is always executed
 -  _expression_ is evaluated at the end of each iteration
 -  _statement_ and/or _expression_ should modify something so that the evaluation of condition-expr may change
-◦ Otherwise the loop may never terminate
+-  Otherwise the loop may never terminate
 - A for loop can always be transformed into a while loop and viceversa
-◦ Prefer a for loop when there is an obvious loop variable
+- Prefer a for loop when there is an obvious loop variable
 
 ## Integer square root (_for loop_)
 
@@ -297,7 +297,7 @@ Type representing a floating-point number
 - Operations: addition, subtraction, multiplication, division, comparisons, . . .
 - Precision is about 16 decimal digits
 - Literals in the form _sign<sub>opt</sub>  significand  exponent<sub>opt</sub>_
-◦ 42.0 1. -1.5 12.34e3 -.34E-3 -1234e-2 ◦ ···en/···En means x10<sup>n</sup>
+- 42.0 1. -1.5 12.34e3 -.34E-3 -1234e-2 ◦ ···en/···En means x10<sup>n</sup>
 
 ### Float
 Type representing a floating-point number
@@ -305,5 +305,7 @@ Type representing a floating-point number
 - Operations: addition, subtraction, multiplication, division, comparisons, . . .
 - Precision is about 7 decimal digits
 - Literals in the form _sign<sub>opt</sub>  significand  exponent<sub>opt</sub>_ F
-◦ 42.0f 1.F -1.5f 12.34e3F -.34E-3f -1234e-2F 
-◦ Same as double but with an f or F suffix
+- 42.0f 1.F -1.5f 12.34e3F -.34E-3f -1234e-2F 
+- Same as double but with an f or F suffix
+
+<img width="692" alt="Schermata 2022-03-18 alle 19 08 36" src="https://user-images.githubusercontent.com/99679794/159059382-68f9018d-8e45-44ef-b7e9-0a50109edcd1.png">
