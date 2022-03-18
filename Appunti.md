@@ -250,15 +250,17 @@ while ( condition expr ) statement
 - _statement_ should modify something so that the evaluation of _condition-expr_ may change
 ◦ Otherwise the loop may never terminate
 
-## Integer square root (_while_)
+## Integer square root (_while loop_)
 Write a program that computes the integer square root of a non-negative integer number, i.e. the largest integer number whose square is not greater than the given number
 
 <img width="367" alt="Schermata 2022-03-18 alle 17 55 07" src="https://user-images.githubusercontent.com/99679794/159047913-9fbf9f23-8910-408b-af57-ea5ebbcc8618.png">
 
 [https://github.com/elenasaso/Programmazione-ES/blob/4a6c8586e47224e3bed489506e8401e85bf13a42/integer_square_root_while.cpp]
 
-## Sum of the first N numbers 
+## Sum of the first N numbers (_while loop_)
 Write a program that reads a non-negative integer number N from standard input, computes the sum of the first N numbers and writes the result to standard output
+
+[https://github.com/elenasaso/Programmazione-ES/blob/a63a958cafd9053f9147863b8e77df6c71a8d2de/sum_first_N_numbers_while.cpp]
 
 ### for loop
 ```
@@ -270,3 +272,16 @@ for ( init-statement condition-expr opt ; expression opt ) statement
 - _condition-expr_ is evaluated at the beginning of each iteration
 ◦ If _condition-expr_ is already false at the beginning, statement is never executed
 ◦ But _init-statement_ is always executed
+-  _expression_ is evaluated at the end of each iteration
+-  _statement_ and/or _expression_ should modify something so that the evaluation of condition-expr may change
+◦ Otherwise the loop may never terminate
+- A for loop can always be transformed into a while loop and viceversa
+◦ Prefer a for loop when there is an obvious loop variable
+
+## Integer square root (_for loop_)
+
+[https://github.com/elenasaso/Programmazione-ES/blob/508abf20bc20c993d25c4f78cc017f6cb94ed47b/integer_square_root_for.cpp]
+
+## Sum of the first N numbers (_for loop_)
+
+[https://github.com/elenasaso/Programmazione-ES/blob/508abf20bc20c993d25c4f78cc017f6cb94ed47b/sum_first_N_numbers_for.cpp]
