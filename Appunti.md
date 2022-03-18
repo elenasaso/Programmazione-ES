@@ -264,10 +264,10 @@ Write a program that reads a non-negative integer number N from standard input, 
 
 ### for loop
 ```
-for ( init-statement condition-expr opt ; expression opt ) statement 
+for ( init-statement; condition-expr<sub>opt</sub> ; expression<sub>opt</sub> ) statement 
 ```
-- Execute _init-statement_, which may be a single ;
-◦ If _init-statement_ contains declarations, the scope of the declared names is the loop
+- Execute _init-statement_, which may be a single
+- If _init-statement_ contains declarations, the scope of the declared names is the loop
 - Execute repeatedly statement until _condition-expr_ becomes false 
 - _condition-expr_ is evaluated at the beginning of each iteration
 ◦ If _condition-expr_ is already false at the beginning, statement is never executed
@@ -285,3 +285,25 @@ for ( init-statement condition-expr opt ; expression opt ) statement
 ## Sum of the first N numbers (_for loop_)
 
 [https://github.com/elenasaso/Programmazione-ES/blob/508abf20bc20c993d25c4f78cc017f6cb94ed47b/sum_first_N_numbers_for.cpp]
+
+## Exercise: the smallest of N numbers
+Write a program that reads an arbitrary sequence of numbers from standard input and writes the smallest one to standard output 
+Hint 1: press Ctrl-D to tell the program there is nothing more to read from standard input
+Hint 2: the expression std::cin.good() tells if it’s still possible to read something from std::cin
+
+### Double 
+Type representing a floating-point number
+- Set of values: subset of R
+- Operations: addition, subtraction, multiplication, division, comparisons, . . .
+- Precision is about 16 decimal digits
+- Literals in the form _sign<sub>opt</sub>  significand  exponent<sub>opt</sub>_
+◦ 42.0 1. -1.5 12.34e3 -.34E-3 -1234e-2 ◦ ···en/···En means x10<sup>n</sup>
+
+### Float
+Type representing a floating-point number
+- Set of values: subset of R
+- Operations: addition, subtraction, multiplication, division, comparisons, . . .
+- Precision is about 7 decimal digits
+- Literals in the form _sign<sub>opt</sub>  significand  exponent<sub>opt</sub>_ F
+◦ 42.0f 1.F -1.5f 12.34e3F -.34E-3f -1234e-2F 
+◦ Same as double but with an f or F suffix
