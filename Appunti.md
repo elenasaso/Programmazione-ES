@@ -161,10 +161,8 @@ A sequence of zero or more statements enclosed between braces ({})
 needed
 - A variable should be initialized at the point of declaration, if there is a meaningful initial value
 
-## The smallest of two numbers 
+## [The smallest of two numbers](https://github.com/elenasaso/Programmazione-ES/blob/94cf40488376963b84b1e2cb8b032fff203d0289/smallest_two_numbers.cpp)
 A program that reads two numbers from input and writes the smallest to output
-
-[https://github.com/elenasaso/Programmazione-ES/blob/94cf40488376963b84b1e2cb8b032fff203d0289/smallest_two_numbers.cpp]
 
 ### If then else
 - Selection statement to choose one of two flows of control depending on a boolean condition
@@ -278,13 +276,9 @@ But _init-statement_ is always executed
 - A for loop can always be transformed into a while loop and viceversa
 - Prefer a for loop when there is an obvious loop variable
 
-## Integer square root (_for loop_)
+## [Integer square root (_for loop_)]([https://github.com/elenasaso/Programmazione-ES/blob/508abf20bc20c993d25c4f78cc017f6cb94ed47b/integer_square_root_for.cpp])
 
-[https://github.com/elenasaso/Programmazione-ES/blob/508abf20bc20c993d25c4f78cc017f6cb94ed47b/integer_square_root_for.cpp]
-
-## Sum of the first N numbers (_for loop_)
-
-[https://github.com/elenasaso/Programmazione-ES/blob/508abf20bc20c993d25c4f78cc017f6cb94ed47b/sum_first_N_numbers_for.cpp]
+## [Sum of the first N numbers (_for loop_)](https://github.com/elenasaso/Programmazione-ES/blob/508abf20bc20c993d25c4f78cc017f6cb94ed47b/sum_first_N_numbers_for.cpp)
 
 ## Exercise: the smallest of N numbers
 Write a program that reads an arbitrary sequence of numbers from standard input and writes the smallest one to standard output 
@@ -370,11 +364,46 @@ A function associates a bloch of statements with
 - a list of zero or more parameters 
 A function may return a result 
 
-Let's consider the code that computes the **integer square root**
+Let's consider the code that computes the **integer square root**:
 - Let's give it a name -> isqrt
 - We pass isqrt a number -> the list of parameters has only one item of type int 
 - isqrt computes a value that we want back -> the function returns a value of type int
 
-<img width="450" alt="Schermata 2022-03-18 alle 21 14 04" src="https://user-images.githubusercontent.com/99679794/159077156-1c8948f5-dc23-49b0-a223-19b137f8c667.png">    <img width="450" alt="Schermata 2022-03-18 alle 21 14 13" src="https://user-images.githubusercontent.com/99679794/159077201-f85361cf-5f6d-42be-b309-0600380aea52.png">
+<img width="500" alt="Schermata 2022-03-18 alle 21 14 04" src="https://user-images.githubusercontent.com/99679794/159077156-1c8948f5-dc23-49b0-a223-19b137f8c667.png">    <img width="500" alt="Schermata 2022-03-18 alle 21 14 13" src="https://user-images.githubusercontent.com/99679794/159077201-f85361cf-5f6d-42be-b309-0600380aea52.png">
 
+- **A function needs to be declared/defined before its use**
+```
+return-type function-name ( parameter lyst );
+return-type function-name ( parameter lyst ) { ... }
 
+int isqrt(int);
+double pow(double base, double exponenent);
+void print(std::string);
+int generate_random_number();
+```
+- Each parameter in the parameter list is of the form
+_type name<sub>opt</sub>_
+_type_ is mandatory, _name_ is optional
+- Parameters are separated by commas
+- The parameter list can be empty, i.e. ()
+- The return statement returns the result (and the control) to the calling function
+- If the function returns nothing, the return type is _void_
+
+A function has only one entry point, but it may have multiple exit points, i.e. there can be multiple return statements
+- For a function returning a non-void type -> **return _expression_;** // The result of expression must be convertible to the return type
+- For a function returning void -> **return;** // In this case the return is optional (at the end of the function)
+
+Calling/invoking a function is a type of expression of the form **_F(E1,E2,...,EN)_**
+  - F is an expression that identifies a function, typically its name
+  - Each E<sub>i</sub> is an expression, whose value is used to initialize the corresponding parameter (i.e. in the same position) in the function              declaration
+```
+  int s = isqrt(24);
+  std::cout << count_words("Hello, " + name);
+  print(std::to_string(pow(isqrt(24), 2)));
+```
+- A function can call other functions
+- A function should not be too long; if it is, try to break it into multiple parts, each implemented as a function
+- A function can call itself, directly or indirectly
+  - This is called _recursion_
+  - Often an elegant alternative to a loop 
+  - Not easy to master, don’t abuse
