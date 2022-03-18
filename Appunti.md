@@ -123,3 +123,5 @@ std::cout << "hello, " << name << '\n'
 ### Operators
 <img width="645" alt="Schermata 2022-03-18 alle 14 52 09" src="https://user-images.githubusercontent.com/99679794/159015306-ddee6efd-3484-4d73-987f-52a4a95f7f69.png">
 
+## Sum of two numbers 
+[sum_two_numbers.cpp]
