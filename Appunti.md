@@ -373,4 +373,8 @@ A function may return a result
 Let's consider the code that computes the **integer square root**
 - Let's give it a name -> isqrt
 - We pass isqrt a number -> the list of parameters has only one item of type int 
-- isqrt computes a value that we want back 
+- isqrt computes a value that we want back -> the function returns a value of type int
+
+<img width="350" alt="Schermata 2022-03-18 alle 21 14 04" src="https://user-images.githubusercontent.com/99679794/159077156-1c8948f5-dc23-49b0-a223-19b137f8c667.png">/<img width="350" alt="Schermata 2022-03-18 alle 21 14 13" src="https://user-images.githubusercontent.com/99679794/159077201-f85361cf-5f6d-42be-b309-0600380aea52.png">
+
+
