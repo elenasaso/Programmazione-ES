@@ -1,6 +1,6 @@
-## Imparare a programmare in C++
+## Learn to program in C++
 
-#### Compilare e rinominare 
+#### Compile and rename 
 - In C++ the translation into a binary format is the job of the compiler, which produces an EXECUTABLE file
 Source file (minimal.cpp) --> compilation (g++-11) --> Executable binary file (a.out)
 ```
@@ -12,9 +12,9 @@ a.out   minimal.cpp
 a.out   minimal    minimal.cpp
 % ./minimal # to run the renamed cpp
 ```
-#### Formattare
+#### Format
 ```
-clang-format minimal.cpp // serve per formattare il codice e renderlo più leggibile
+clang-format minimal.cpp // used to format the code and make it more readable
 int main ( )
 ```
 #### Input/Output
@@ -25,7 +25,7 @@ int main ( )
 - To insert values, use the stream operators <<
 
 ## Hello
-Dall'editor:
+In the editor:
 ```
 #include <iostream> // import I/O utilities
 #include <string> // import string utilities
@@ -37,7 +37,7 @@ int main() // start the program from here
   std::cout << "Hello, " << name << '\n'; // print a multi-part message
 }
 ```
-Dal terminale:
+In the terminal:
 ```
 % g++-11 hello.cpp -o hello
 % ./hello
@@ -221,7 +221,7 @@ The scope of a name appearing in a program is the, possibly discontiguous, porti
 ```
 {
 ···
-  int num;         // scope of num begins here
+  int num; // scope of num begins here
   std::cin >> num; // ok
 } // scope of num ends here
 std::cout << num;  // error
@@ -233,6 +233,7 @@ std::cout << num;  // error
 
 ## Is a number even? 
 A program that reads a number from input and tells if it’s even
+
 [https://github.com/elenasaso/Programmazione-ES/blob/866f85b45ef84ae9da8fc4a8e3caa1da7313508b/number_even.cpp]
 
 ## Exercise: the smallest of three numbers 
