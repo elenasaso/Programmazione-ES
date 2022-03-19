@@ -634,8 +634,8 @@ Type representing a character
 - Execute repeatedly _statement_ for all the elements of the range
 - _range-declaration_ declares a variable of the same type of an element of the range
   - Can (and should) be a (const) reference
-• _range-expression_ represents the range to iterate over
-• More on ranges later
+- _range-expression_ represents the range to iterate over
+- More on ranges later
 ```
 std::string s{"Hello!"};
 for (char& c : s) {
@@ -646,3 +646,10 @@ for (int i: {1, 2, 3, 4, 5}) {
   std::cout << i << ' ';
 }
 ```
+NB. _**std**_::toupper converts the given character to uppercase according to the character conversion rules defined by the currently installed C locale.
+In the default "C" locale, the following lowercase letters abcdefghijklmnopqrstuvwxyz are replaced with respective uppercase letters ABCDEFGHIJKLMNOPQRSTUVWXYZ.
+
+### Exercises 
+- Write a function that takes a char and returns the corresponding lowercase character if it is a letter; the same char otherwise
+  - e.g. 'A'→'a','a'→'a',';'→';'
+- Write a function that takes two numeric operands of type double and one operator of type char and returns the result of applying that operator to the two operands. For example if the two operands have values 2.0 and 3.0 respectively and the operator has value '+', then the function returns a result with value 5.0. If the operator is invalid, the function returns 0.
