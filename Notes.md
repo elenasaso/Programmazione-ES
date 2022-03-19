@@ -466,3 +466,11 @@ When a program is started the operating system brings the contents of the corres
 
 ### Pass by value, return by-value
 <img width="650" alt="Schermata 2022-03-19 alle 12 19 53" src="https://user-images.githubusercontent.com/99679794/159118991-c2d45e0f-40bd-4868-a7a4-d3f6afa0231c.png">
+
+### Stack frame
+- A piece of memory allocated and dedicated to the execution of a function
+- It contains local variables (including function parameters), return address, saved registers, . . .
+- Managed in a Last-In, First-Out (LIFO) way
+- The size of the stack frame is **computed by the compiler**
+- There is a special register (the stack pointer register, **%rsp**) that indicates the frame of the currently running function
+- At runtime the allocation/deallocation of a frame consists simply in subtracting/adding that frame size to the stack pointer register
