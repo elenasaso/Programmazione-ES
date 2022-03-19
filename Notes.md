@@ -576,3 +576,18 @@ foo("a"); // call foo(std::string)
 **NB.** 
 - When used as a function return type, the _**void**_ keyword specifies that the function doesn't return a value. When used for a function's parameter list, void specifies that the function takes no parameters. When used in the declaration of a pointer, void specifies that the pointer is "universal".
 - _**foo**_ is used as a place-holder name, usually in example code to signify that the object being named, or the choice of name, is not part of the crux of the example.
+
+### Conditional/ternary operator expression
+_expression<sub>condition</sub>_ ? _expression<sub>true</sub>_ : _expression<sub>false</sub>_
+```
+int gdc(int a, int b)
+{
+return (b == 0) ? a : gdc(b, a % b);
+}
+```
+NB. gdc computes the greatest common divisor of the integers a and b
+- Evaluate expression<sub>condition</sub>, whose value is of type (convertible to) bool
+- If true, expression<sub>true</sub> is evaluated and the resulting value is the value of the whole expression
+- If false, expression<sub>false</sub> is evaluated and the resulting value is the value of the whole expression
+- Similar to an if statement, but usable (and useful) where only an expression is allowed
+- The types of expression<sub>true</sub> and expression<sub>false</sub> are subject to some constraints, but let’s assume that they have to be the same
