@@ -1,4 +1,4 @@
-## Learn to program in C++
+## Learn C++ programming
 
 #### Compile and rename 
 - In C++ the translation into a binary format is the job of the compiler, which produces an EXECUTABLE file
