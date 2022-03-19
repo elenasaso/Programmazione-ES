@@ -407,26 +407,16 @@ Calling/invoking a function is a type of expression of the form **_F(E1,E2,...,E
 ### The main function
 - The main (special) function is the entry point of a program 
 - It can have two forms
-  - int main() {···}
+  - ``` int main() {···} ```
   - ...(seelater)
 - If there is no return statement, an implicit return 0; is assumed
   - 0 means success, different from 0 means failure
   - Or use EXIT_SUCCESS and EXIT_FAILURE from <cstdlib>
-  - The exit value is available to the shell via the $? variable
-```
-#include <cstdlib>
-int main() 
-{
-  int n;
-  std::cin >> n;
-  if (std::cin.fail() || n < 0) {
-    std::cerr << "Invalid number\n";
-    return EXIT_FAILURE;
-  }
-  ···
- }
-```
-   
+- The exit value is available to the shell via the $? variable
+
+ 
+  
+
                  
                  
   
