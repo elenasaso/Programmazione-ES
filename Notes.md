@@ -474,3 +474,7 @@ When a program is started the operating system brings the contents of the corres
 - The size of the stack frame is **computed by the compiler**
 - There is a special register (the stack pointer register, **%rsp**) that indicates the frame of the currently running function
 - At runtime the allocation/deallocation of a frame consists simply in subtracting/adding that frame size to the stack pointer register
+
+### Passing by value vs passing by reference
+![pass-by-reference-vs-pass-by-value-animation](https://user-images.githubusercontent.com/99679794/159121128-a2494106-8f99-4fc9-a9a8-4de36d4b678c.gif)
+
