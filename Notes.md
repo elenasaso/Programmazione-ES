@@ -476,15 +476,15 @@ When a program is started the operating system brings the contents of the corres
 - At runtime the allocation/deallocation of a frame consists simply in subtracting/adding that frame size to the stack pointer register
 
 ### Passing by value may be expensive
-<img width="987" alt="Schermata 2022-03-19 alle 13 35 52" src="https://user-images.githubusercontent.com/99679794/159121380-4200d5e8-1d86-4b76-b1dc-8a083b981e5a.png">
+<img width="650" alt="Schermata 2022-03-19 alle 13 35 52" src="https://user-images.githubusercontent.com/99679794/159121380-4200d5e8-1d86-4b76-b1dc-8a083b981e5a.png">
 
-### References 
+### References (&)
 A variable declared as a _**reference**_ of a type T is another name (an alias) for an existing object of type T
-<img width="847" alt="Schermata 2022-03-19 alle 13 38 53" src="https://user-images.githubusercontent.com/99679794/159121456-b5bd2400-e15b-45c7-9b1c-a3fd3309a591.png">
+<img width="500" alt="Schermata 2022-03-19 alle 13 38 53" src="https://user-images.githubusercontent.com/99679794/159121456-b5bd2400-e15b-45c7-9b1c-a3fd3309a591.png">
 
-<img width="846" alt="Schermata 2022-03-19 alle 13 37 49" src="https://user-images.githubusercontent.com/99679794/159121421-32ec36f8-e8a8-44d3-9d58-5dfb852c34c0.png">
+<img width="500" alt="Schermata 2022-03-19 alle 13 37 49" src="https://user-images.githubusercontent.com/99679794/159121421-32ec36f8-e8a8-44d3-9d58-5dfb852c34c0.png">
 
-<img width="844" alt="Schermata 2022-03-19 alle 13 39 07" src="https://user-images.githubusercontent.com/99679794/159121463-e2523177-da80-4ec6-ae2d-5bbd43fee453.png">
+<img width="500" alt="Schermata 2022-03-19 alle 13 39 07" src="https://user-images.githubusercontent.com/99679794/159121463-e2523177-da80-4ec6-ae2d-5bbd43fee453.png">
 
 ```
 int i = 12; 
@@ -499,8 +499,9 @@ int& r; // error
 ```
 - A reference must be initialized to refer to a valid object
 - A reference cannot _rebind_ (be re-associated) to another object
+- For a given type T, T& is a compound type, distinct from T
 
-### Passing by value vs passing by reference
+### Recap: passing by value vs passing by reference
 Think of the coffe in the cup as the data in a variable. One is a copy and one is the original
 ![pass-by-reference-vs-pass-by-value-animation](https://user-images.githubusercontent.com/99679794/159121128-a2494106-8f99-4fc9-a9a8-4de36d4b678c.gif)
 #### Pass by reference
@@ -521,4 +522,57 @@ Overview:
 3. A copy of the data is sent to the callee.
 4. Changes made to the passed variable **do not affect** the actual value.
 
+### const and references
+```
+std::string name = "Elena";
+std::string& rname = name; // ok, can read/modify name via rname
+std::string const& crname = name; // ok, crname is a read-only view of name
+```
+```
+std::string const name = "Elena";
+std::string& rname = name; // error, could modify via rname
+std::string const& crname = name; // ok, can only read name via crname
+```
 
+### How to pass arguments to functions 
+- For input parameters 
+  - If the type is primitve, pass by value
+```
+int isqrt(int n); // good
+int isqrt(int const& n); // bad!
+```
+  - Otherwise, pass by const reference
+```
+int count_words(std::string const&);
+```
+- For input-output or output parameters, pass by non-const reference
+```
+void to_lowercase(std::string& s);
+void read_from_cin(int& n)
+```
+
+### Function overloading
+- Multiple functions can have the same name
+- But different lists of parameters (number and/or types)
+- The compiler chooses the function that best matches the arguments in the call
+  - It usually does what is expected, possibly applying appropriate implicit conversions, but not always
+  - Compilation error if there is no match or no unique best match
+- The return type doesn’t matter
+
+```
+void foo(int);
+int foo(int, char);
+bool foo(double);
+int foo(std::string s);
+
+foo(0); // call foo(int)
+foo(0, 'O'); // call foo(int, char)
+foo(0,); // call foo(double)
+foo(std::string{}); // call foo(std::string)
+foo(0L); // long int, ambigous, error
+foo('a'); // call foo(int)
+foo("a"); // call foo(std::string)
+```
+**NB.** 
+- When used as a function return type, the _**void**_ keyword specifies that the function doesn't return a value. When used for a function's parameter list, void specifies that the function takes no parameters. When used in the declaration of a pointer, void specifies that the pointer is "universal".
+- _**foo**_ is used as a place-holder name, usually in example code to signify that the object being named, or the choice of name, is not part of the crux of the example.
