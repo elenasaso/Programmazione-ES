@@ -421,5 +421,30 @@ Calling/invoking a function is a type of expression of the form **_F(E1,E2,...,E
 - Write a function is_prime that takes an int and tells if it’s a prime number
 - More on edabit, leetcode, . . .
                  
-                 
-  
+### How do we know the code we write is correct?
+- One of the most effective techniques is testing
+  - Execute the code with reasonable and unreasonable input and see if it behaves according to the expectations
+  - The purpose of testing is to (try to) **break** the code
+- Here we focus on a form of testing called _**unit testing**_, where the units (of code) under test are, for example, functions
+- There are many tools/frameworks to do unit testing (Google Test, Catch, Doctest, Boost.Test, . . . )
+- Let’s use **Doctest**
+
+### How to use Doctest
+- On [godbolt](https://godbolt.org) it’s available selecting it under “Libraries”
+- Otherwise download locally a single _header file_ into the directory containing your code, e.g. using wget or curl 
+- At the top of your C++ file add the lines
+```
+#define DOCTEST_CONFIG_IMPLEMENT_WITH_MAIN
+#include "doctest.h"
+```
+- Don't add main into your file 
+- After the code of the function(s) you have written, add lines like the following:
+```
+TEST_CASE("Testing isqrt") {
+  CHECK(isqrt(0) == 0);
+  CHECK(isqrt(9) == 3);
+  CHECK(isqrt(10) == 3);
+  CHECK(isqrt(-1) == 0);
+···
+}
+```
