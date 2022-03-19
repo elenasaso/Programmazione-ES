@@ -475,17 +475,34 @@ When a program is started the operating system brings the contents of the corres
 - There is a special register (the stack pointer register, **%rsp**) that indicates the frame of the currently running function
 - At runtime the allocation/deallocation of a frame consists simply in subtracting/adding that frame size to the stack pointer register
 
+### Passing by value may be expensive
+<img width="987" alt="Schermata 2022-03-19 alle 13 35 52" src="https://user-images.githubusercontent.com/99679794/159121380-4200d5e8-1d86-4b76-b1dc-8a083b981e5a.png">
+
+### References 
+A variable declared as a _**reference**_ of a type T is another name (an alias) for an existing object of type T
+<img width="847" alt="Schermata 2022-03-19 alle 13 38 53" src="https://user-images.githubusercontent.com/99679794/159121456-b5bd2400-e15b-45c7-9b1c-a3fd3309a591.png">
+
+<img width="846" alt="Schermata 2022-03-19 alle 13 37 49" src="https://user-images.githubusercontent.com/99679794/159121421-32ec36f8-e8a8-44d3-9d58-5dfb852c34c0.png">
+
+<img width="844" alt="Schermata 2022-03-19 alle 13 39 07" src="https://user-images.githubusercontent.com/99679794/159121463-e2523177-da80-4ec6-ae2d-5bbd43fee453.png">
+
+```
+int i = 12; 
+int j = 56;
+int& ri = i; // reference declarator
+ri == 12; // true
+ri = 34;
+ri == 34 && i == 34  // true
+ri == j;
+ri == 56 && i == 56 // true
+int& r; // error
+```
+- A reference must be initialized to refer to a valid object
+- A reference cannot _rebind_ (be re-associated) to another object
+
 ### Passing by value vs passing by reference
 Think of the coffe in the cup as the data in a variable. One is a copy and one is the original
 ![pass-by-reference-vs-pass-by-value-animation](https://user-images.githubusercontent.com/99679794/159121128-a2494106-8f99-4fc9-a9a8-4de36d4b678c.gif)
-#### Pass by value 
-Pass by value means that **a copy of the actual parameter’s value is made in memory**, i.e. the caller and callee have two independent variables with the same value. If the callee modifies the parameter value, the effect is not visible to the caller.
-
-Overview:
-1. Passes an argument by value.
-2. Callee does not have any access to the underlying element in the calling code.
-3. A copy of the data is sent to the callee.
-4. Changes made to the passed variable **do not affect** the actual value.
 #### Pass by reference
 Pass by reference (also called pass by address) means to pass the reference of an argument in the calling function to the corresponding formal parameter of the called function so that a copy of the address of the actual parameter is made in memory, i.e. the caller and the callee use the same variable for the parameter. **If the callee modifies the parameter variable, the effect is visible to the caller’s variable.**
 
@@ -494,4 +511,14 @@ Overview:
 2. Callee gives a direct reference to the programming element in the calling code.
 3. The memory address of the stored data is passed.
 4. Changes to the value **have an effect** on the original data.
+
+#### Pass by value 
+Pass by value means that **a copy of the actual parameter’s value is made in memory**, i.e. the caller and callee have two independent variables with the same value. If the callee modifies the parameter value, the effect is not visible to the caller.
+
+Overview:
+1. Passes an argument by value.
+2. Callee does not have any access to the underlying element in the calling code.
+3. A copy of the data is sent to the callee.
+4. Changes made to the passed variable **do not affect** the actual value.
+
 
