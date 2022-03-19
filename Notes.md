@@ -476,22 +476,22 @@ When a program is started the operating system brings the contents of the corres
 - At runtime the allocation/deallocation of a frame consists simply in subtracting/adding that frame size to the stack pointer register
 
 ### Passing by value vs passing by reference
-![pass-by-reference-vs-pass-by-value-animation](https://user-images.githubusercontent.com/99679794/159121128-a2494106-8f99-4fc9-a9a8-4de36d4b678c.gif)
 Think of the coffe in the cup as the data in a variable. One is a copy and one is the original
+![pass-by-reference-vs-pass-by-value-animation](https://user-images.githubusercontent.com/99679794/159121128-a2494106-8f99-4fc9-a9a8-4de36d4b678c.gif)
 #### Pass by value 
-Pass by value means that a copy of the actual parameter’s value is made in memory, i.e. the caller and callee have two independent variables with the same value. If the callee modifies the parameter value, the effect is not visible to the caller.
+Pass by value means that **a copy of the actual parameter’s value is made in memory**, i.e. the caller and callee have two independent variables with the same value. If the callee modifies the parameter value, the effect is not visible to the caller.
 
 Overview:
 1. Passes an argument by value.
 2. Callee does not have any access to the underlying element in the calling code.
 3. A copy of the data is sent to the callee.
-4. Changes made to the passed variable do not affect the actual value.
+4. Changes made to the passed variable **do not affect** the actual value.
 #### Pass by reference
-Pass by reference (also called pass by address) means to pass the reference of an argument in the calling function to the corresponding formal parameter of the called function so that a copy of the address of the actual parameter is made in memory, i.e. the caller and the callee use the same variable for the parameter. If the callee modifies the parameter variable, the effect is visible to the caller’s variable.
+Pass by reference (also called pass by address) means to pass the reference of an argument in the calling function to the corresponding formal parameter of the called function so that a copy of the address of the actual parameter is made in memory, i.e. the caller and the callee use the same variable for the parameter. **If the callee modifies the parameter variable, the effect is visible to the caller’s variable.**
 
 Overview:
 1. Passes an argument by reference.
 2. Callee gives a direct reference to the programming element in the calling code.
 3. The memory address of the stored data is passed.
-4. Changes to the value have an effect on the original data.
+4. Changes to the value **have an effect** on the original data.
 
