@@ -591,3 +591,58 @@ NB. gdc computes the greatest common divisor of the integers a and b
 - If false, expression<sub>false</sub> is evaluated and the resulting value is the value of the whole expression
 - Similar to an if statement, but usable (and useful) where only an expression is allowed
 - The types of expression<sub>true</sub> and expression<sub>false</sub> are subject to some constraints, but let’s assume that they have to be the same
+
+### break and continue for loops
+- Within a loop block, the **break** statement allows to terminate the loop
+- Within a loop block, the **continue** statement allows to jump to the end of the current iteration of the loop
+- The same effect can be obtained with appropriate use of conditionals, but the resulting code may be more complicated
+
+### Object initialization with braces
+- An object can be initialized specifing its value between {}
+```
+int i{123};
+float f{123.F);
+std::strinf s{"hello"};
+```
+- Introduced as a _universal_ form of initialization that could replace all others, but there are situations where it’s not usable
+- Protects against _narrowing_, i.e. loss of information caused by implicit conversions
+```
+double d{1.}; // ok, no conversion
+float d1{1.} // ok, no information loss
+float f2{d}; // error
+float f3{9'999'999};  // ok, no information loss
+float f3{99'999'999}; // error
+int i{1.};            // error
+int g{d};             // error
+```
+
+### char 
+Type representing a character
+- Set of values: letters in the alphabet (lower- and upper-case), digits, punctuation marks, some special characters, . . .
+- Size: typically 1 byte, but not necessarily
+- Literals: characters between single quotes
+  - 'a' 'B' '7' ',' '?' '#' '/'
+- Some character literals need to be expressed as \-escaped sequences
+  - '\'' '\\' '\n' '\t' '\0'
+- A char is an integral type so it supports integral operations
+  - ``` std::cout << '9' - '0'; // 9 ```
+  - ``` c < 'z'; ```
+
+### _range-for_ loop
+``` for ( range-declaration : range-expression ) statement ```
+- Simplified form of a for loop, to iterate on all the elements of a _range_ (sequence), such as a string of characters
+- Execute repeatedly _statement_ for all the elements of the range
+- _range-declaration_ declares a variable of the same type of an element of the range
+  - Can (and should) be a (const) reference
+• _range-expression_ represents the range to iterate over
+• More on ranges later
+```
+std::string s{"Hello!"};
+for (char& c : s) {
+  c = std::toupper(c);
+}
+
+for (int i: {1, 2, 3, 4, 5}) {
+  std::cout << i << ' ';
+}
+```
