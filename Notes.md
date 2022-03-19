@@ -653,3 +653,33 @@ In the default "C" locale, the following lowercase letters abcdefghijklmnopqrstu
 - Write a function that takes a char and returns the corresponding lowercase character if it is a letter; the same char otherwise
   - e.g. 'A'→'a','a'→'a',';'→';'
 - Write a function that takes two numeric operands of type double and one operator of type char and returns the result of applying that operator to the two operands. For example if the two operands have values 2.0 and 3.0 respectively and the operator has value '+', then the function returns a result with value 5.0. If the operator is invalid, the function returns 0.
+
+### Returning a reference
+- A function can return a reference only if the referenced object survives the end of the function
+  - In the caller, the reference would refer to an object that doesn’t exist anymore
+- In particular do not return a reference to a function local variable
+```
+// bad
+int& add(int a, int b)
+{
+  int result = a + b;
+  return result;
+}
+```
+```
+int& increment(int& a) // ok
+{
+++a;
+return a; 
+}
+```
+- Useful to compose multiple function calls on the same object
+```
+std::string s{···}; 
+trim_left(trim_right(tolower(s)));
+```
+NB. 
+- trim_left(): Removes all leading white spaces from the string.
+- trim_right(): Removes all trailing white spaces from the string.
+- trim(): Removes all leading and trailing white spaces from the string.
+- tolower(): Convert uppercase letter to lowercase using locale
