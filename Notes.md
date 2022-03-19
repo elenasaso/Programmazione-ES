@@ -462,4 +462,7 @@ When a program is started the operating system brings the contents of the corres
   - initialized and uninitialized (set to 0)
 - **Program instructions**
 
-<img width="250" alt="Schermata 2022-03-19 alle 12 15 12" src="https://user-images.githubusercontent.com/99679794/159118822-b7d4007d-8d64-497a-a5d4-b897c9aee184.png">
+<img width="200" alt="Schermata 2022-03-19 alle 12 15 12" src="https://user-images.githubusercontent.com/99679794/159118822-b7d4007d-8d64-497a-a5d4-b897c9aee184.png">
+
+### Pass by value, return by-value
+<img width="650" alt="Schermata 2022-03-19 alle 12 19 53" src="https://user-images.githubusercontent.com/99679794/159118991-c2d45e0f-40bd-4868-a7a4-d3f6afa0231c.png">
