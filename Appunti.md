@@ -407,16 +407,19 @@ Calling/invoking a function is a type of expression of the form **_F(E1,E2,...,E
 ### The main function
 - The main (special) function is the entry point of a program 
 - It can have two forms
-  - ``` int main() {···} ```
+  - int main() {···}
   - ...(seelater)
 - If there is no return statement, an implicit return 0; is assumed
   - 0 means success, different from 0 means failure
-  - Or use EXIT_SUCCESS and EXIT_FAILURE from <cstdlib>
+  - Or use EXIT_SUCCESS and EXIT_FAILURE from cstdlib
 - The exit value is available to the shell via the $? variable
-
  
-  
-
+## Exercises
+- Write a function pow that takes two ints and computes and returns the value of the first (the base) raised to the power of the second (the exponent)
+- Write a function gcd that takes two ints and computes the Gratest Common Denominator using the Euclid’s algorithm
+- Write a function lcm that takes two ints and computes the Least Common Multiple
+- Write a function is_prime that takes an int and tells if it’s a prime number
+- More on edabit, leetcode, . . .
                  
                  
   
