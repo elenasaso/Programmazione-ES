@@ -448,3 +448,19 @@ TEST_CASE("Testing isqrt") {
 ···
 }
 ```
+
+### Memory layout of a process
+- A process is a running program 
+- When a program is started the operating system brings the contents of the corresponding file into memory according to well-defined conventions
+
+- Stack
+  - function local variables
+  - function call bookkeeping
+- Heap
+  - dynamic allocation
+- Global data 
+  - literals and variables 
+  - initialized and uninitialized (set to 0)
+- Program instructions
+
+<img width="350" alt="Schermata 2022-03-19 alle 12 15 12" src="https://user-images.githubusercontent.com/99679794/159118822-b7d4007d-8d64-497a-a5d4-b897c9aee184.png">
