@@ -683,3 +683,41 @@ NB.
 - trim_right(): Removes all trailing white spaces from the string.
 - trim(): Removes all leading and trailing white spaces from the string.
 - tolower(): Convert uppercase letter to lowercase using locale
+
+### Data abstraction
+- The C++ language has a strong focus on building lightweight data abstractions
+  - The source code can use terminology and notation close to the problem domain, making it more expressive
+  - There is little (if any) overhead in terms of space or time during execution
+- class and struct are the primary mechanism to define new compound types on top of fundamental types
+
+### Data structure
+Let's introduce a type to represent complex numbers
+```
+struct Complex {
+  double r; // data member
+  double i;
+};
+
+double norm2(Complex c);
+Complex sqrt(Complex c);
+Complex c{1., 2.};
+double n = norm2(c);
+Complex c2 = sqrt(c);
+
+Complex& cr = c; // reference
+double norm2(Complex c) {
+  return c.r * c.r + c.i * c.i;
+}
+
+double norm2(Complec const& c) {
+  return c.r * c.r + c.i * c.i;
+}
+```
+- A complex is composed of two doubles
+- The . (dot) operator allows to access a member of an object of class type (such as struct)
+
+#### Struct
+- C++ struct, short for C++ Structure, is an user-defined data type. 
+- It allows a user to combine data items of (possibly) different data types under a single name.
+- C++ structs are different from _arrays_ because arrays only hold data of similar data-types; C++ struct, on the other hand, can store data of multiple data-types.
+- Each element in the structure is called a _member_.
