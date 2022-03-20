@@ -872,7 +872,7 @@ class Complex {
   - If the number is negative, the sign is kept in the numerator 
   - The denominator is different from 0
 ```
-class Ration 
+class Rational
 {
   int n_;
   ind d_;
