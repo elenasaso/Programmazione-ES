@@ -815,20 +815,5 @@ c.rho = -1; // valid?
   - enforce an internal relation (_class invariant_) between data members
 
 ### Private representation, public interface
-- The internal representation of a data structure should be considered an implementation detail 
-- The manipulation of objects should happen through a well-defined function-based interface
-- Known as _**encapsulation**_
-```
-class Complex {
-private: // cartesian form 
-  double r;
-  double i;
-public: 
-  // associated functions (member functions, also known as methods)
-};
+See slides (page 102-106)
 
-Complex c{1., 2.}; // error
-double norm2(Complex const& c) {
-  return c.r * c.r + c.i * c.i; // error
-}
-```
