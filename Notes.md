@@ -801,7 +801,9 @@ struct Complex {
 };
 ```
 - As a consequence, all client code has to change 
-``` double norm2(Complex const& c) { return c.rho * c.rho }; ```
+``` 
+double norm2(Complex const& c) { return c.rho * c.rho }; 
+```
 - Not all combinations of (ρ, θ) are valid 
   - ρ ≥ 0, θ ∈ [0,2π]
 ```
