@@ -929,3 +929,28 @@ bool operator==(Rational const& 1, Rational const& r)
   return 1.num() == r.num() && 1.den() == r.den();
 }
 ```
+- If the asserted condition is not satisfied, it means that the state of the program does not conform to the expectations of the programmer, i.e. to the design
+- The state may even be corrupteed -> it's probably wiser to ```terminate``` the program as soon as possible to avoid causing damage
+- Useful during testin/debugging
+- Can be disabled for performance reasons (g++ DNDEBUG ...)
+  - Avoid side effects in asserts (e.g. assignements or calls to non-const methods), because they would disappear from the executable
+- assert (but also Doctest's CHECK) is a _preprocessor macr_
+- Macros obey syntactic rules that are different from those of C++ proper
+```
+assert(Rational{1,2} == Rational {2,4}); // error (*)
+assert(Rational(1,2) == Rational (2,4)); // ok
+assert((Rational{1,2} == Rational {2,4})); // ok
+```
+( * ) macro "assert" passed 3 arguments, but takes just 1
+- Macros _expand_ to arbitrary text, which is then passed to the real C++ compiler
+
+### Exceptions
+- Exceptions provide a general mechanism to:
+  - notify the occurrence of an error in the program execution
+    - using a throw expression
+  - transfer control to a handler defined in a previous function in the call chain
+    − using a try/catch statement
+- Exceptions help separate application logic from error management 
+- A typical use is in constructors and operators
+- Exceptions cannot be ignored 
+  - If a handler is not found the program is terminated
