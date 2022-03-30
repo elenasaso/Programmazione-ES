@@ -954,3 +954,33 @@ assert((Rational{1,2} == Rational {2,4})); // ok
 - A typical use is in constructors and operators
 - Exceptions cannot be ignored 
   - If a handler is not found the program is terminated
+```
+struct E {};
+
+auto low() {
+  ... // this part is executed
+  throw E{};
+  ... // this part is not executed
+}
+
+auto mid() {
+  ... // this part is executed 
+  low ();
+  ... // this part is not executed
+}
+
+auto high() {
+  try {
+    ... // this part is executed
+    mid();
+    ... // this part is not executed
+  } catch (E& e) {
+    ... // use e
+  }
+}
+```
+- An exception is an object
+- After being raised (thrown), an exception is propagated up the stack of function calls until a suitable catch clause (handler) is found
+- If no suitable handler (i.e. one compatible with the type of exception) is found, the program is terminated
+- Exceptions should be caught by (const) reference
+- During _stack unwinding_ the stack frames are properly cleaned up
