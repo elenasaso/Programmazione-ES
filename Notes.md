@@ -904,4 +904,28 @@ class Rational
 - The invariant is preserved by **public** methods
   - The invariant holds when the function is entered -> the implementation can make assumptions
   - The invarian may be violated during the execution of the function
-  - The invariant is re-established before exiting the function
+
+### assert
+Check that a certain boolean expression is satisfied at run time 
+- for examble, a class invariant at the end of a constructor or a condition at the beginning of a function (a _pre-condition_)
+```
+#include <cassert>
+
+class Rational {
+  ...
+  Rational(int num = 0, ind den = 1) : n{num}, d{den} {
+    ...
+    assert (std::gcd(n, d) == 1 && d > 0);
+  }
+  Rational& operator/=(int n) {
+    assert(n != 0);
+    ...
+ }
+};
+
+bool operator==(Rational const& 1, Rational const& r)
+{
+  assert(std::gcd(1.num(), 1.den()) == 1 && std::gcd(r.num(), r.den()) == 1);
+  return 1.num() == r.num() && 1.den() == r.den();
+}
+```
